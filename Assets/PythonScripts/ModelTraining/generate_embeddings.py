@@ -2,7 +2,7 @@ import pandas as pd
 from model_references import sentence_model
 
 # Load XANEW filtered words
-vocabulary = pd.read_csv('relevant_vocabulary.csv')
+vocabulary = pd.read_csv('Data/training_vocabulary.csv')
 
 # Get embeddings for all words
 words = vocabulary['word'].tolist()
@@ -17,4 +17,4 @@ vocabulary['embedding'] = list(embeddings)
 embeddings_df = vocabulary[["word", "embedding"]]
 
 # Save to CSV
-embeddings_df.to_csv("word_embeddings.csv", index=False)
+embeddings_df.to_csv("Data/word_embeddings.csv", index=False)

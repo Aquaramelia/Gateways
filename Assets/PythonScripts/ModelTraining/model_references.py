@@ -4,14 +4,9 @@ class EmbeddingToParams(nn.Module):
     def __init__(self, input_dim=384, output_dim=9):
         super().__init__()
         self.net = nn.Sequential(
-            nn.Linear(input_dim, 256),
+            nn.Linear(input_dim, 64),
             nn.ReLU(),
-            nn.Dropout(0.2),
-            nn.Linear(256, 128),
-            nn.ReLU(),
-            nn.Dropout(0.2),
-            nn.Linear(128, 64),
-            nn.ReLU(),
+            nn.Dropout(0.5),
             nn.Linear(64, output_dim)
         )
     
@@ -21,3 +16,17 @@ class EmbeddingToParams(nn.Module):
 from sentence_transformers import SentenceTransformer
 # Load sentence transformer
 sentence_model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# Define which columns are the target parameters
+# Map XANEW dimensions to Unity parameters
+target_columns = [
+    'arousal_norm',
+    'valence_norm',
+    'dominance_norm',
+    'segment_length',
+    'angle',
+    'arch_curve_angle',
+    'thickness',
+    'thickness_decay',
+    'upward_bias'
+]

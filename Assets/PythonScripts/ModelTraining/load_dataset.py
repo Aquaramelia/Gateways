@@ -6,7 +6,7 @@ from model_references import target_columns
 
 # Define variables to be calculated in this file
 combined_df = None
-X_train, X_test, y_train, y_test, scaler_y, scaler_X = None
+X_train, X_test, y_train, y_test, scaler_y, scaler_X = (None,) * 6
 
 def return_combined_df():
     # Load XANEW filtered words

@@ -1,12 +1,8 @@
 import torch
-from sklearn.model_selection import train_test_split
-import pandas as pd
-import numpy as np
 import torch.nn as nn
 import torch.optim as optim
-from sklearn.preprocessing import StandardScaler
 
-from model_references import EmbeddingToParams, target_columns
+from model_references import EmbeddingToParams
 from load_dataset import get_training_data, get_combined_df
 
 X_train, X_test, y_train, y_test = get_training_data()

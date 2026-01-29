@@ -23,10 +23,10 @@ target_columns = [
     'arousal_norm',
     'valence_norm',
     'dominance_norm',
-    'segment_length',
-    'angle',
-    'arch_curve_angle',
-    'thickness',
-    'thickness_decay',
-    'upward_bias'
+    'symmetry',
+    'complexity',
+    'ornament_density',
+    'intensity',
+    'depth',
+    'thickness'
 ]

@@ -13,7 +13,7 @@ def return_combined_df():
     xanew = pd.read_csv('Data/xanew_filtered.csv')
 
     # Load your custom ratings
-    custom = pd.read_csv('Data/custom_ml_targets.csv')
+    custom = pd.read_csv('Data/semantic_parameters_dataset.csv')
 
     # Load the word embeddings
     word_embeddings = pd.read_csv('Data/word_embeddings.csv')

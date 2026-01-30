@@ -97,3 +97,18 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# ML model files
+/[Aa]ssets/PythonScripts/ModelTraining/Model/*
+
+# Generated mesh output
+/[Aa]ssets/PythonScripts/ModelTraining/Output/*
+
+# Python cache
+/[Aa]ssets/PythonScripts/**/__pycache__/
+
+# Unity Resources folder
+/[Aa]ssets/Resources/
+
+# Model training results documentation
+/[Aa]ssets/PythonScripts/ModelTraining/Results/
